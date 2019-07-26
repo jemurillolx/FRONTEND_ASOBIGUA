@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+</head>
+<body>
+    <button type="button" class="block" onclick="prueba();">Actualizar Gráfica</button>
+    <div id="graph" width="100%" height="500px" ></div>
+    <script type="text/javascript">
+
+
+        const prueba = () => {
+            var s = '{  "shotXYZ": {	"0": { "x": "0", "y": "0", "z": "1", "timeStamp": "2019-07-07T06:47:26.5349652+00:00" }, "1": {  "x": "0",  "y": "0",  "z": "1.6753521434382312",  "timeStamp": "2019-07-07T06:47:26.5349746+00:00" } } }';
+            let b = JSON.parse(s);
+            let arrayX = new Array();
+            let arrayY = new Array();
+            let arrayZ = new Array();
+            let arrayColor = new Array();
+
+            if (Object.keys(b['shotXYZ']).length >= 1) {
+                for (let i = 0; i < Object.keys(b['shotXYZ']).length; i++) {
+                    arrayX.push(b['shotXYZ'][i]['x']);
+                    arrayY.push(b['shotXYZ'][i]['y']);
+                    arrayZ.push(b['shotXYZ'][i]['z']);
+                    arrayColor.push("0");
+                }
+            }
+            Plotly.d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/3d-line1.csv', function (err, rows) {
+
+                var x = arrayX; 
+                var y = arrayY; 
+                var z = arrayZ; 
+                var c = arrayColor;
+
+                Plotly.plot('graph', [{
+                    type: 'scatter3d',
+                    mode: 'lines',
+                    x: x,
+                    y: y,
+                    z: z,
+                    opacity: 1,
+                    line: {
+                        width: 6,
+                        color: c,
+                        reversescale: false
+                    }
+                }], {
+                        height: 640
+                    }, { showSendToCloud: true });
+            });
+        }
+
+    </script>
+</body>
+</html>

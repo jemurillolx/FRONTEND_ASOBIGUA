@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+</head>
+<body>
+    <button type="button" class="block" onclick="prueba();">Actualizar Gráfica</button>
+    <div id="myDiv" width="100%" height="500px"></div>
+    <script type="text/javascript">
+
+
+        const prueba = () => {
+            var data = [
+                {
+                    x: ['giraffes', 'orangutans', 'monkeys'],
+                    y: [20, 14, 23],
+                    type: 'bar'
+                }
+            ];
+
+            Plotly.newPlot('myDiv', data);
+        }
+
+    </script>
+</body>
+</html>

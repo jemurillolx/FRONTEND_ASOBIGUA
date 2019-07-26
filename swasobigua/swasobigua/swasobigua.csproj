@@ -1,0 +1,791 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0139B7DC-B7BF-491C-91FC-34D8D012008A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>swasobigua</RootNamespace>
+    <AssemblyName>swasobigua</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap">
+      <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.3.7\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.3.3.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Diagnostics.DiagnosticSource">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.4.1\lib\net45\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.TelemetryCorrelation">
+      <HintPath>..\packages\Microsoft.AspNet.TelemetryCorrelation.1.0.0\lib\net45\Microsoft.AspNet.TelemetryCorrelation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="mypages\contacto.aspx" />
+    <Content Include="mypages\crearusuarios.aspx" />
+    <Content Include="mypages\css\bootstrap-datepicker.css.map" />
+    <Content Include="mypages\css\bootstrap-datepicker.standalone.css.map" />
+    <Content Include="mypages\css\bootstrap-datepicker3.css.map" />
+    <Content Include="mypages\css\bootstrap-datepicker3.standalone.css.map" />
+    <Content Include="mypages\disenio\.editorconfig" />
+    <Content Include="mypages\disenio\.eslintignore" />
+    <Content Include="mypages\disenio\.eslintrc.json" />
+    <Content Include="mypages\disenio\.stylelintignore" />
+    <Content Include="mypages\disenio\.stylelintrc" />
+    <Content Include="mypages\disenio\.travis.yml" />
+    <Content Include="mypages\disenio\assets\css\docs.min.css.map" />
+    <Content Include="mypages\disenio\assets\img\favicons\manifest.json" />
+    <Content Include="mypages\disenio\assets\js\.eslintrc.json" />
+    <Content Include="mypages\disenio\assets\scss\docs.scss" />
+    <Content Include="mypages\disenio\assets\scss\_ads.scss" />
+    <Content Include="mypages\disenio\assets\scss\_algolia.scss" />
+    <Content Include="mypages\disenio\assets\scss\_anchor.scss" />
+    <Content Include="mypages\disenio\assets\scss\_brand.scss" />
+    <Content Include="mypages\disenio\assets\scss\_browser-bugs.scss" />
+    <Content Include="mypages\disenio\assets\scss\_buttons.scss" />
+    <Content Include="mypages\disenio\assets\scss\_callouts.scss" />
+    <Content Include="mypages\disenio\assets\scss\_clipboard-js.scss" />
+    <Content Include="mypages\disenio\assets\scss\_colors.scss" />
+    <Content Include="mypages\disenio\assets\scss\_component-examples.scss" />
+    <Content Include="mypages\disenio\assets\scss\_content.scss" />
+    <Content Include="mypages\disenio\assets\scss\_examples.scss" />
+    <Content Include="mypages\disenio\assets\scss\_footer.scss" />
+    <Content Include="mypages\disenio\assets\scss\_masthead.scss" />
+    <Content Include="mypages\disenio\assets\scss\_nav.scss" />
+    <Content Include="mypages\disenio\assets\scss\_sidebar.scss" />
+    <Content Include="mypages\disenio\assets\scss\_skiplink.scss" />
+    <Content Include="mypages\disenio\assets\scss\_syntax.scss" />
+    <Content Include="mypages\disenio\assets\scss\_variables.scss" />
+    <Content Include="mypages\disenio\build\.eslintrc.json" />
+    <Content Include="mypages\disenio\build\.htmllintrc" />
+    <Content Include="mypages\disenio\build\gcp-key.json.enc" />
+    <Content Include="mypages\disenio\build\sauce_browsers.json" />
+    <Content Include="mypages\disenio\build\ship.sh" />
+    <Content Include="mypages\disenio\build\upload-preview.sh" />
+    <Content Include="mypages\disenio\build\workbox.config.json" />
+    <Content Include="mypages\disenio\CNAME" />
+    <Content Include="mypages\disenio\CODE_OF_CONDUCT.md" />
+    <Content Include="mypages\disenio\composer.json" />
+    <Content Include="mypages\disenio\dist\css\bootstrap-grid.css.map" />
+    <Content Include="mypages\disenio\dist\css\bootstrap-grid.min.css.map" />
+    <Content Include="mypages\disenio\dist\css\bootstrap-reboot.css.map" />
+    <Content Include="mypages\disenio\dist\css\bootstrap-reboot.min.css.map" />
+    <Content Include="mypages\disenio\dist\css\bootstrap.css.map" />
+    <Content Include="mypages\disenio\dist\css\bootstrap.min.css.map" />
+    <Content Include="mypages\disenio\dist\js\bootstrap.bundle.js.map" />
+    <Content Include="mypages\disenio\dist\js\bootstrap.bundle.min.js.map" />
+    <Content Include="mypages\disenio\dist\js\bootstrap.js.map" />
+    <Content Include="mypages\disenio\dist\js\bootstrap.min.js.map" />
+    <Content Include="mypages\disenio\docs\4.0\about\brand.md" />
+    <Content Include="mypages\disenio\docs\4.0\about\license.md" />
+    <Content Include="mypages\disenio\docs\4.0\about\overview.md" />
+    <Content Include="mypages\disenio\docs\4.0\about\translations.md" />
+    <Content Include="mypages\disenio\docs\4.0\browser-bugs.md" />
+    <Content Include="mypages\disenio\docs\4.0\components\alerts.md" />
+    <Content Include="mypages\disenio\docs\4.0\components\badge.md" />
+    <Content Include="mypages\disenio\docs\4.0\components\breadcrumb.md" />
+    <Content Include="mypages\disenio\docs\4.0\components\button-group.md" />
+    <Content Include="mypages\disenio\docs\4.0\components\buttons.md" />
+    <Content Include="mypages\disenio\docs\4.0\components\card.md" />
+    <Content Include="mypages\disenio\docs\4.0\components\carousel.md" />
+    <Content Include="mypages\disenio\docs\4.0\components\collapse.md" />
+    <Content Include="mypages\disenio\docs\4.0\components\dropdowns.md" />
+    <Content Include="mypages\disenio\docs\4.0\components\forms.md" />
+    <Content Include="mypages\disenio\docs\4.0\components\input-group.md" />
+    <Content Include="mypages\disenio\docs\4.0\components\jumbotron.md" />
+    <Content Include="mypages\disenio\docs\4.0\components\list-group.md" />
+    <Content Include="mypages\disenio\docs\4.0\components\modal.md" />
+    <Content Include="mypages\disenio\docs\4.0\components\navbar.md" />
+    <Content Include="mypages\disenio\docs\4.0\components\navs.md" />
+    <Content Include="mypages\disenio\docs\4.0\components\pagination.md" />
+    <Content Include="mypages\disenio\docs\4.0\components\popovers.md" />
+    <Content Include="mypages\disenio\docs\4.0\components\progress.md" />
+    <Content Include="mypages\disenio\docs\4.0\components\scrollspy.md" />
+    <Content Include="mypages\disenio\docs\4.0\components\tooltips.md" />
+    <Content Include="mypages\disenio\docs\4.0\content\code.md" />
+    <Content Include="mypages\disenio\docs\4.0\migration.md" />
+    <Content Include="mypages\disenio\Gemfile" />
+    <Content Include="mypages\disenio\Gemfile.lock" />
+    <Content Include="mypages\disenio\js\dist\alert.js" />
+    <Content Include="mypages\disenio\js\dist\button.js" />
+    <Content Include="mypages\disenio\js\dist\carousel.js" />
+    <Content Include="mypages\disenio\js\dist\collapse.js" />
+    <Content Include="mypages\disenio\js\dist\dropdown.js" />
+    <Content Include="mypages\disenio\js\dist\index.js" />
+    <Content Include="mypages\disenio\js\dist\modal.js" />
+    <Content Include="mypages\disenio\js\dist\popover.js" />
+    <Content Include="mypages\disenio\js\dist\scrollspy.js" />
+    <Content Include="mypages\disenio\js\dist\tab.js" />
+    <Content Include="mypages\disenio\js\dist\tooltip.js" />
+    <Content Include="mypages\disenio\js\dist\util.js" />
+    <Content Include="mypages\disenio\js\src\alert.js" />
+    <Content Include="mypages\disenio\js\src\button.js" />
+    <Content Include="mypages\disenio\js\src\carousel.js" />
+    <Content Include="mypages\disenio\js\src\collapse.js" />
+    <Content Include="mypages\disenio\js\src\dropdown.js" />
+    <Content Include="mypages\disenio\js\src\index.js" />
+    <Content Include="mypages\disenio\js\src\modal.js" />
+    <Content Include="mypages\disenio\js\src\popover.js" />
+    <Content Include="mypages\disenio\js\src\scrollspy.js" />
+    <Content Include="mypages\disenio\js\src\tab.js" />
+    <Content Include="mypages\disenio\js\src\tooltip.js" />
+    <Content Include="mypages\disenio\js\src\util.js" />
+    <Content Include="mypages\disenio\js\tests\index.html" />
+    <Content Include="mypages\disenio\js\tests\karma.conf.js" />
+    <Content Include="mypages\disenio\js\tests\unit\alert.js" />
+    <Content Include="mypages\disenio\js\tests\unit\button.js" />
+    <Content Include="mypages\disenio\js\tests\unit\carousel.js" />
+    <Content Include="mypages\disenio\js\tests\unit\collapse.js" />
+    <Content Include="mypages\disenio\js\tests\unit\dropdown.js" />
+    <Content Include="mypages\disenio\js\tests\unit\modal.js" />
+    <Content Include="mypages\disenio\js\tests\unit\popover.js" />
+    <Content Include="mypages\disenio\js\tests\unit\scrollspy.js" />
+    <Content Include="mypages\disenio\js\tests\unit\tab.js" />
+    <Content Include="mypages\disenio\js\tests\unit\tooltip.js" />
+    <Content Include="mypages\disenio\js\tests\unit\util.js" />
+    <Content Include="mypages\disenio\js\tests\vendor\jquery-1.9.1.min.js" />
+    <Content Include="mypages\disenio\js\tests\vendor\qunit.css" />
+    <Content Include="mypages\disenio\js\tests\vendor\qunit.js" />
+    <Content Include="mypages\disenio\js\tests\visual\alert.html" />
+    <Content Include="mypages\disenio\js\tests\visual\button.html" />
+    <Content Include="mypages\disenio\js\tests\visual\carousel.html" />
+    <Content Include="mypages\disenio\js\tests\visual\collapse.html" />
+    <Content Include="mypages\disenio\js\tests\visual\dropdown.html" />
+    <Content Include="mypages\disenio\js\tests\visual\modal.html" />
+    <Content Include="mypages\disenio\js\tests\visual\popover.html" />
+    <Content Include="mypages\disenio\js\tests\visual\scrollspy.html" />
+    <Content Include="mypages\disenio\js\tests\visual\tab.html" />
+    <Content Include="mypages\disenio\js\tests\visual\tooltip.html" />
+    <Content Include="mypages\disenio\LICENSE" />
+    <Content Include="mypages\disenio\package-lock.json" />
+    <Content Include="mypages\disenio\package.json" />
+    <Content Include="mypages\disenio\README.md" />
+    <Content Include="mypages\disenio\sache.json" />
+    <Content Include="mypages\disenio\_config.yml" />
+    <Content Include="mypages\disenio\_includes\ads.html" />
+    <Content Include="mypages\disenio\_includes\docs-navbar.html" />
+    <Content Include="mypages\disenio\_includes\docs-sidebar.html" />
+    <Content Include="mypages\disenio\_includes\favicons.html" />
+    <Content Include="mypages\disenio\_includes\footer.html" />
+    <Content Include="mypages\disenio\_includes\header.html" />
+    <Content Include="mypages\disenio\_includes\icons\bootstrap.svg" />
+    <Content Include="mypages\disenio\_includes\icons\download.svg" />
+    <Content Include="mypages\disenio\_includes\icons\github.svg" />
+    <Content Include="mypages\disenio\_includes\icons\import.svg" />
+    <Content Include="mypages\disenio\_includes\icons\lightning.svg" />
+    <Content Include="mypages\disenio\_includes\icons\menu.svg" />
+    <Content Include="mypages\disenio\_includes\icons\slack.svg" />
+    <Content Include="mypages\disenio\_includes\icons\twitter.svg" />
+    <Content Include="mypages\disenio\_includes\scripts.html" />
+    <Content Include="mypages\disenio\_includes\social.html" />
+    <Content Include="mypages\disenio\_layouts\default.html" />
+    <Content Include="mypages\disenio\_layouts\docs.html" />
+    <Content Include="mypages\disenio\_layouts\examples.html" />
+    <Content Include="mypages\disenio\_layouts\home.html" />
+    <Content Include="mypages\disenio\_layouts\redirect.html" />
+    <Content Include="mypages\disenio\_layouts\simple.html" />
+    <Content Include="mypages\entrenos.aspx" />
+    <Content Include="mypages\fonts\font-awesome-4.7.0\css\font-awesome.css" />
+    <Content Include="mypages\fonts\font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="mypages\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="mypages\fonts\font-awesome-4.7.0\HELP-US-OUT.txt" />
+    <Content Include="mypages\fonts\iconic\css\material-design-iconic-font.css" />
+    <Content Include="mypages\fonts\iconic\css\material-design-iconic-font.min.css" />
+    <Content Include="mypages\fonts\iconic\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="mypages\images\asobigua-logo.png" />
+    <Content Include="mypages\images\asobigua.jpg" />
+    <Content Include="mypages\images\bg-01.jpg" />
+    <Content Include="mypages\images\carrusel\pasion.jpeg" />
+    <Content Include="mypages\images\cdag.jpg" />
+    <Content Include="mypages\images\digicue.jpg" />
+    <Content Include="mypages\images\fb.png" />
+    <Content Include="mypages\images\fondo.jpg" />
+    <Content Include="mypages\images\fondo2.jpg" />
+    <Content Include="mypages\images\icons\favicon.ico" />
+    <Content Include="mypages\images\load.gif" />
+    <Content Include="mypages\images\logo.png" />
+    <Content Include="mypages\images\mas.png" />
+    <Content Include="mypages\images\metamotion.jpg" />
+    <Content Include="mypages\images\pasion.png" />
+    <Content Include="mypages\images\pool.png" />
+    <Content Include="mypages\index.aspx" />
+    <Content Include="mypages\others\jquery-1.12.0.min.js" />
+    <Content Include="mypages\others\test.html" />
+    <Content Include="mypages\others\test2.html" />
+    <Content Include="mypages\others\test3.html" />
+    <Content Include="mypages\tiro.aspx" />
+    <Content Include="mypages\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="mypages\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="mypages\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="mypages\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="mypages\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="mypages\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="mypages\disenio\_data\breakpoints.yml" />
+    <Content Include="mypages\disenio\_data\browser-bugs.yml" />
+    <Content Include="mypages\disenio\_data\browser-features.yml" />
+    <Content Include="mypages\disenio\_data\colors.yml" />
+    <Content Include="mypages\disenio\_data\examples.yml" />
+    <Content Include="mypages\disenio\_data\grays.yml" />
+    <Content Include="mypages\disenio\_data\nav.yml" />
+    <Content Include="mypages\disenio\_data\theme-colors.yml" />
+    <Content Include="mypages\disenio\_data\translations.yml" />
+    <Content Include="mypages\disenio\_includes\callout-danger-async-methods.md" />
+    <Content Include="mypages\disenio\_includes\callout-info-mediaqueries-breakpoints.md" />
+    <Content Include="mypages\disenio\_includes\callout-warning-color-assistive-technologies.md" />
+    <Content Include="mypages\disenio\_plugins\bugify.rb" />
+    <Content Include="mypages\disenio\_plugins\callout.rb" />
+    <Content Include="mypages\disenio\_plugins\example.rb" />
+    <Content Include="mypages\disenio\_plugins\markdown-block.rb" />
+    <Content Include="mypages\disenio\js\dist\alert.js.map" />
+    <Content Include="mypages\disenio\js\dist\button.js.map" />
+    <Content Include="mypages\disenio\js\dist\carousel.js.map" />
+    <Content Include="mypages\disenio\js\dist\collapse.js.map" />
+    <Content Include="mypages\disenio\js\dist\dropdown.js.map" />
+    <Content Include="mypages\disenio\js\dist\index.js.map" />
+    <Content Include="mypages\disenio\js\dist\modal.js.map" />
+    <Content Include="mypages\disenio\js\dist\popover.js.map" />
+    <Content Include="mypages\disenio\js\dist\scrollspy.js.map" />
+    <Content Include="mypages\disenio\js\dist\tab.js.map" />
+    <Content Include="mypages\disenio\js\dist\tooltip.js.map" />
+    <Content Include="mypages\disenio\js\dist\util.js.map" />
+    <Content Include="mypages\disenio\js\tests\README.md" />
+    <Content Include="mypages\disenio\js\tests\unit\.eslintrc.json" />
+    <Content Include="mypages\disenio\nuget\bootstrap.nuspec" />
+    <Content Include="mypages\disenio\nuget\bootstrap.sass.nuspec" />
+    <Content Include="mypages\disenio\nuget\MyGet.ps1" />
+    <Content Include="mypages\disenio\scss\bootstrap-grid.scss" />
+    <Content Include="mypages\disenio\scss\bootstrap-reboot.scss" />
+    <Content Include="mypages\disenio\scss\bootstrap.scss" />
+    <Content Include="mypages\disenio\scss\mixins\_alert.scss" />
+    <Content Include="mypages\disenio\scss\mixins\_background-variant.scss" />
+    <Content Include="mypages\disenio\scss\mixins\_badge.scss" />
+    <Content Include="mypages\disenio\scss\mixins\_border-radius.scss" />
+    <Content Include="mypages\disenio\scss\mixins\_box-shadow.scss" />
+    <Content Include="mypages\disenio\scss\mixins\_breakpoints.scss" />
+    <Content Include="mypages\disenio\scss\mixins\_buttons.scss" />
+    <Content Include="mypages\disenio\scss\mixins\_caret.scss" />
+    <Content Include="mypages\disenio\scss\mixins\_clearfix.scss" />
+    <Content Include="mypages\disenio\scss\mixins\_float.scss" />
+    <Content Include="mypages\disenio\scss\mixins\_forms.scss" />
+    <Content Include="mypages\disenio\scss\mixins\_gradients.scss" />
+    <Content Include="mypages\disenio\scss\mixins\_grid-framework.scss" />
+    <Content Include="mypages\disenio\scss\mixins\_grid.scss" />
+    <Content Include="mypages\disenio\scss\mixins\_hover.scss" />
+    <Content Include="mypages\disenio\scss\mixins\_image.scss" />
+    <Content Include="mypages\disenio\scss\mixins\_list-group.scss" />
+    <Content Include="mypages\disenio\scss\mixins\_lists.scss" />
+    <Content Include="mypages\disenio\scss\mixins\_nav-divider.scss" />
+    <Content Include="mypages\disenio\scss\mixins\_navbar-align.scss" />
+    <Content Include="mypages\disenio\scss\mixins\_pagination.scss" />
+    <Content Include="mypages\disenio\scss\mixins\_reset-text.scss" />
+    <Content Include="mypages\disenio\scss\mixins\_resize.scss" />
+    <Content Include="mypages\disenio\scss\mixins\_screen-reader.scss" />
+    <Content Include="mypages\disenio\scss\mixins\_size.scss" />
+    <Content Include="mypages\disenio\scss\mixins\_table-row.scss" />
+    <Content Include="mypages\disenio\scss\mixins\_text-emphasis.scss" />
+    <Content Include="mypages\disenio\scss\mixins\_text-hide.scss" />
+    <Content Include="mypages\disenio\scss\mixins\_text-truncate.scss" />
+    <Content Include="mypages\disenio\scss\mixins\_transition.scss" />
+    <Content Include="mypages\disenio\scss\mixins\_visibility.scss" />
+    <Content Include="mypages\disenio\scss\utilities\_align.scss" />
+    <Content Include="mypages\disenio\scss\utilities\_background.scss" />
+    <Content Include="mypages\disenio\scss\utilities\_borders.scss" />
+    <Content Include="mypages\disenio\scss\utilities\_clearfix.scss" />
+    <Content Include="mypages\disenio\scss\utilities\_display.scss" />
+    <Content Include="mypages\disenio\scss\utilities\_embed.scss" />
+    <Content Include="mypages\disenio\scss\utilities\_flex.scss" />
+    <Content Include="mypages\disenio\scss\utilities\_float.scss" />
+    <Content Include="mypages\disenio\scss\utilities\_position.scss" />
+    <Content Include="mypages\disenio\scss\utilities\_screenreaders.scss" />
+    <Content Include="mypages\disenio\scss\utilities\_sizing.scss" />
+    <Content Include="mypages\disenio\scss\utilities\_spacing.scss" />
+    <Content Include="mypages\disenio\scss\utilities\_text.scss" />
+    <Content Include="mypages\disenio\scss\utilities\_visibility.scss" />
+    <Content Include="mypages\disenio\scss\_alert.scss" />
+    <Content Include="mypages\disenio\scss\_badge.scss" />
+    <Content Include="mypages\disenio\scss\_breadcrumb.scss" />
+    <Content Include="mypages\disenio\scss\_button-group.scss" />
+    <Content Include="mypages\disenio\scss\_buttons.scss" />
+    <Content Include="mypages\disenio\scss\_card.scss" />
+    <Content Include="mypages\disenio\scss\_carousel.scss" />
+    <Content Include="mypages\disenio\scss\_close.scss" />
+    <Content Include="mypages\disenio\scss\_code.scss" />
+    <Content Include="mypages\disenio\scss\_custom-forms.scss" />
+    <Content Include="mypages\disenio\scss\_dropdown.scss" />
+    <Content Include="mypages\disenio\scss\_forms.scss" />
+    <Content Include="mypages\disenio\scss\_functions.scss" />
+    <Content Include="mypages\disenio\scss\_grid.scss" />
+    <Content Include="mypages\disenio\scss\_images.scss" />
+    <Content Include="mypages\disenio\scss\_input-group.scss" />
+    <Content Include="mypages\disenio\scss\_jumbotron.scss" />
+    <Content Include="mypages\disenio\scss\_list-group.scss" />
+    <Content Include="mypages\disenio\scss\_media.scss" />
+    <Content Include="mypages\disenio\scss\_mixins.scss" />
+    <Content Include="mypages\disenio\scss\_modal.scss" />
+    <Content Include="mypages\disenio\scss\_nav.scss" />
+    <Content Include="mypages\disenio\scss\_navbar.scss" />
+    <Content Include="mypages\disenio\scss\_pagination.scss" />
+    <Content Include="mypages\disenio\scss\_popover.scss" />
+    <Content Include="mypages\disenio\scss\_print.scss" />
+    <Content Include="mypages\disenio\scss\_progress.scss" />
+    <Content Include="mypages\disenio\scss\_reboot.scss" />
+    <Content Include="mypages\disenio\scss\_root.scss" />
+    <Content Include="mypages\disenio\scss\_tables.scss" />
+    <Content Include="mypages\disenio\scss\_tooltip.scss" />
+    <Content Include="mypages\disenio\scss\_transitions.scss" />
+    <Content Include="mypages\disenio\scss\_type.scss" />
+    <Content Include="mypages\disenio\scss\_utilities.scss" />
+    <Content Include="mypages\disenio\scss\_variables.scss" />
+    <Content Include="mypages\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="mypages\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="mypages\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="mypages\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="mypages\fonts\font-awesome-4.7.0\fonts\FontAwesome.otf" />
+    <Content Include="mypages\fonts\font-awesome-4.7.0\less\animated.less" />
+    <Content Include="mypages\fonts\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <Content Include="mypages\fonts\font-awesome-4.7.0\less\core.less" />
+    <Content Include="mypages\fonts\font-awesome-4.7.0\less\fixed-width.less" />
+    <Content Include="mypages\fonts\font-awesome-4.7.0\less\font-awesome.less" />
+    <Content Include="mypages\fonts\font-awesome-4.7.0\less\icons.less" />
+    <Content Include="mypages\fonts\font-awesome-4.7.0\less\larger.less" />
+    <Content Include="mypages\fonts\font-awesome-4.7.0\less\list.less" />
+    <Content Include="mypages\fonts\font-awesome-4.7.0\less\mixins.less" />
+    <Content Include="mypages\fonts\font-awesome-4.7.0\less\path.less" />
+    <Content Include="mypages\fonts\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <Content Include="mypages\fonts\font-awesome-4.7.0\less\screen-reader.less" />
+    <Content Include="mypages\fonts\font-awesome-4.7.0\less\stacked.less" />
+    <Content Include="mypages\fonts\font-awesome-4.7.0\less\variables.less" />
+    <Content Include="mypages\fonts\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <Content Include="mypages\fonts\font-awesome-4.7.0\scss\_animated.scss" />
+    <Content Include="mypages\fonts\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <Content Include="mypages\fonts\font-awesome-4.7.0\scss\_core.scss" />
+    <Content Include="mypages\fonts\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <Content Include="mypages\fonts\font-awesome-4.7.0\scss\_icons.scss" />
+    <Content Include="mypages\fonts\font-awesome-4.7.0\scss\_larger.scss" />
+    <Content Include="mypages\fonts\font-awesome-4.7.0\scss\_list.scss" />
+    <Content Include="mypages\fonts\font-awesome-4.7.0\scss\_mixins.scss" />
+    <Content Include="mypages\fonts\font-awesome-4.7.0\scss\_path.scss" />
+    <Content Include="mypages\fonts\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <Content Include="mypages\fonts\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <Content Include="mypages\fonts\font-awesome-4.7.0\scss\_stacked.scss" />
+    <Content Include="mypages\fonts\font-awesome-4.7.0\scss\_variables.scss" />
+    <Content Include="mypages\fonts\iconic\fonts\Material-Design-Iconic-Font.eot" />
+    <Content Include="mypages\fonts\iconic\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="mypages\fonts\iconic\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="mypages\fonts\iconic\fonts\Material-Design-Iconic-Font.woff2" />
+    <Content Include="mypages\fonts\poppins\Poppins-Black.ttf" />
+    <Content Include="mypages\fonts\poppins\Poppins-BlackItalic.ttf" />
+    <Content Include="mypages\fonts\poppins\Poppins-Bold.ttf" />
+    <Content Include="mypages\fonts\poppins\Poppins-BoldItalic.ttf" />
+    <Content Include="mypages\fonts\poppins\Poppins-ExtraBold.ttf" />
+    <Content Include="mypages\fonts\poppins\Poppins-ExtraBoldItalic.ttf" />
+    <Content Include="mypages\fonts\poppins\Poppins-ExtraLight.ttf" />
+    <Content Include="mypages\fonts\poppins\Poppins-ExtraLightItalic.ttf" />
+    <Content Include="mypages\fonts\poppins\Poppins-Italic.ttf" />
+    <Content Include="mypages\fonts\poppins\Poppins-Light.ttf" />
+    <Content Include="mypages\fonts\poppins\Poppins-LightItalic.ttf" />
+    <Content Include="mypages\fonts\poppins\Poppins-Medium.ttf" />
+    <Content Include="mypages\fonts\poppins\Poppins-MediumItalic.ttf" />
+    <Content Include="mypages\fonts\poppins\Poppins-Regular.ttf" />
+    <Content Include="mypages\fonts\poppins\Poppins-SemiBold.ttf" />
+    <Content Include="mypages\fonts\poppins\Poppins-SemiBoldItalic.ttf" />
+    <Content Include="mypages\fonts\poppins\Poppins-Thin.ttf" />
+    <Content Include="mypages\fonts\poppins\Poppins-ThinItalic.ttf" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="mypages\css\bootstrap-datepicker.css" />
+    <Content Include="mypages\css\bootstrap-datepicker.min.css" />
+    <Content Include="mypages\css\bootstrap-datepicker.standalone.css" />
+    <Content Include="mypages\css\bootstrap-datepicker.standalone.min.css" />
+    <Content Include="mypages\css\bootstrap-datepicker3.css" />
+    <Content Include="mypages\css\bootstrap-datepicker3.min.css" />
+    <Content Include="mypages\css\bootstrap-datepicker3.standalone.css" />
+    <Content Include="mypages\css\bootstrap-datepicker3.standalone.min.css" />
+    <Content Include="mypages\css\main.css" />
+    <Content Include="mypages\css\util.css" />
+    <Content Include="mypages\disenio\.babelrc.js" />
+    <Content Include="mypages\disenio\.gitattributes" />
+    <Content Include="mypages\disenio\.gitignore" />
+    <Content Include="mypages\disenio\assets\brand\bootstrap-outline.svg" />
+    <Content Include="mypages\disenio\assets\brand\bootstrap-punchout.svg" />
+    <Content Include="mypages\disenio\assets\brand\bootstrap-social-logo.png" />
+    <Content Include="mypages\disenio\assets\brand\bootstrap-social.png" />
+    <Content Include="mypages\disenio\assets\brand\bootstrap-solid.svg" />
+    <Content Include="mypages\disenio\assets\css\docs.min.css" />
+    <Content Include="mypages\disenio\assets\img\bootstrap-stack.png" />
+    <Content Include="mypages\disenio\assets\img\bootstrap-themes.png" />
+    <Content Include="mypages\disenio\assets\img\favicons\android-chrome-192x192.png" />
+    <Content Include="mypages\disenio\assets\img\favicons\android-chrome-512x512.png" />
+    <Content Include="mypages\disenio\assets\img\favicons\apple-touch-icon.png" />
+    <Content Include="mypages\disenio\assets\img\favicons\browserconfig.xml" />
+    <Content Include="mypages\disenio\assets\img\favicons\favicon-16x16.png" />
+    <Content Include="mypages\disenio\assets\img\favicons\favicon-32x32.png" />
+    <Content Include="mypages\disenio\assets\img\favicons\mstile-144x144.png" />
+    <Content Include="mypages\disenio\assets\img\favicons\mstile-150x150.png" />
+    <Content Include="mypages\disenio\assets\img\favicons\mstile-310x150.png" />
+    <Content Include="mypages\disenio\assets\img\favicons\mstile-310x310.png" />
+    <Content Include="mypages\disenio\assets\img\favicons\mstile-70x70.png" />
+    <Content Include="mypages\disenio\assets\img\favicons\safari-pinned-tab.svg" />
+    <Content Include="mypages\disenio\assets\js\docs.min.js" />
+    <Content Include="mypages\disenio\assets\js\src\application.js" />
+    <Content Include="mypages\disenio\assets\js\src\ie-emulation-modes-warning.js" />
+    <Content Include="mypages\disenio\assets\js\src\pwa.js" />
+    <Content Include="mypages\disenio\assets\js\vendor\anchor.min.js" />
+    <Content Include="mypages\disenio\assets\js\vendor\clipboard.min.js" />
+    <Content Include="mypages\disenio\assets\js\vendor\holder.min.js" />
+    <Content Include="mypages\disenio\assets\js\vendor\jquery-slim.min.js" />
+    <Content Include="mypages\disenio\assets\js\vendor\popper.min.js" />
+    <Content Include="mypages\disenio\build\change-version.js" />
+    <Content Include="mypages\disenio\build\generate-sri.js" />
+    <Content Include="mypages\disenio\build\lint-vars.js" />
+    <Content Include="mypages\disenio\build\postcss.config.js" />
+    <Content Include="mypages\disenio\build\rollup.config.js" />
+    <Content Include="mypages\disenio\build\saucelabs-unit-test.js" />
+    <Content Include="mypages\disenio\build\vnu-jar.js" />
+    <Content Include="mypages\disenio\build\workbox.js" />
+    <Content Include="mypages\disenio\dist\css\bootstrap-grid.css" />
+    <Content Include="mypages\disenio\dist\css\bootstrap-grid.min.css" />
+    <Content Include="mypages\disenio\dist\css\bootstrap-reboot.css" />
+    <Content Include="mypages\disenio\dist\css\bootstrap-reboot.min.css" />
+    <Content Include="mypages\disenio\dist\css\bootstrap.css" />
+    <Content Include="mypages\disenio\dist\css\bootstrap.min.css" />
+    <Content Include="mypages\disenio\dist\js\bootstrap.bundle.js" />
+    <Content Include="mypages\disenio\dist\js\bootstrap.bundle.min.js" />
+    <Content Include="mypages\disenio\dist\js\bootstrap.js" />
+    <Content Include="mypages\disenio\dist\js\bootstrap.min.js" />
+    <Content Include="mypages\disenio\favicon.ico" />
+    <Content Include="mypages\disenio\index.html" />
+    <Content Include="mypages\disenio\package.js" />
+    <Content Include="mypages\disenio\robots.txt" />
+    <Content Include="mypages\disenio\sw.js" />
+    <Content Include="mypages\login.aspx" />
+    <Content Include="mypages\vendor\animate\animate.css" />
+    <Content Include="mypages\vendor\animsition\css\animsition.css" />
+    <Content Include="mypages\vendor\animsition\css\animsition.min.css" />
+    <Content Include="mypages\vendor\animsition\js\animsition.js" />
+    <Content Include="mypages\vendor\animsition\js\animsition.min.js" />
+    <Content Include="mypages\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="mypages\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="mypages\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="mypages\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="mypages\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="mypages\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="mypages\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="mypages\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="mypages\vendor\bootstrap\js\popper.js" />
+    <Content Include="mypages\vendor\bootstrap\js\popper.min.js" />
+    <Content Include="mypages\vendor\bootstrap\js\tooltip.js" />
+    <Content Include="mypages\vendor\countdowntime\countdowntime.js" />
+    <Content Include="mypages\vendor\css-hamburgers\hamburgers.css" />
+    <Content Include="mypages\vendor\css-hamburgers\hamburgers.min.css" />
+    <Content Include="mypages\vendor\daterangepicker\daterangepicker.css" />
+    <Content Include="mypages\vendor\daterangepicker\daterangepicker.js" />
+    <Content Include="mypages\vendor\daterangepicker\moment.js" />
+    <Content Include="mypages\vendor\daterangepicker\moment.min.js" />
+    <Content Include="mypages\vendor\jquery\jquery-3.2.1.min.js" />
+    <Content Include="mypages\vendor\perfect-scrollbar\perfect-scrollbar.css" />
+    <Content Include="mypages\vendor\perfect-scrollbar\perfect-scrollbar.min.js" />
+    <Content Include="mypages\vendor\select2\select2.css" />
+    <Content Include="mypages\vendor\select2\select2.js" />
+    <Content Include="mypages\vendor\select2\select2.min.css" />
+    <Content Include="mypages\vendor\select2\select2.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Site.Master" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Web.config" />
+    <Content Include="Bundle.config" />
+    <Content Include="Site.Mobile.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="mypages\contacto.aspx.cs">
+      <DependentUpon>contacto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mypages\contacto.aspx.designer.cs">
+      <DependentUpon>contacto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mypages\crearusuarios.aspx.cs">
+      <DependentUpon>crearusuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mypages\crearusuarios.aspx.designer.cs">
+      <DependentUpon>crearusuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mypages\entrenos.aspx.cs">
+      <DependentUpon>entrenos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mypages\entrenos.aspx.designer.cs">
+      <DependentUpon>entrenos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mypages\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mypages\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mypages\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mypages\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mypages\Models\Communication\AsobiguaApiResponse.cs" />
+    <Compile Include="mypages\Models\player.cs" />
+    <Compile Include="mypages\Models\shotdata.cs" />
+    <Compile Include="mypages\Models\shots.cs" />
+    <Compile Include="mypages\Models\ErrorMessage.cs" />
+    <Compile Include="mypages\Models\trainer.cs" />
+    <Compile Include="mypages\Models\xyzShots.cs" />
+    <Compile Include="mypages\Services\BaseService.cs" />
+    <Compile Include="mypages\Services\PlayerService.cs" />
+    <Compile Include="mypages\Services\UserService.cs" />
+    <Compile Include="mypages\tiro.aspx.cs">
+      <DependentUpon>tiro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mypages\tiro.aspx.designer.cs">
+      <DependentUpon>tiro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mypages\Models\User.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50960</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50960/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
